@@ -4,8 +4,8 @@ module jdoodle;
     reg A, B;
     wire Y, t;
 
-    nand(t, A, B);       // first NAND
-    nand(Y, t, t);       // NAND with itself -> AND
+    nand(t, A, B);
+    nand(Y, t, t);
 
     initial begin
         $display("A B | Y");

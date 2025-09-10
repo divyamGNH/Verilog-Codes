@@ -13,6 +13,7 @@ module xorFromNand(
 
 endmodule
 
+
 module tb;
 
    reg A,B;
@@ -21,12 +22,15 @@ module tb;
    xorFromNand uut (.a(A),.b(B),.y(Y));
 
    initial begin
-    
+    // Dump waveform for GTKWave
+    $dumpfile("xorFromNand.vcd");    // output file
+    $dumpvars(0, tb);                // dump all signals in tb
+
     $display("A B | Y");
-    A = 0; B = 0; #1 $display("%b %b | %b", A, B, Y);
-    A = 0; B = 1; #1 $display("%b %b | %b", A, B, Y);
-    A = 1; B = 0; #1 $display("%b %b | %b", A, B, Y);
-    A = 1; B = 1; #1 $display("%b %b | %b", A, B, Y);
+    A = 0; B = 0; #10 $display("%b %b | %b", A, B, Y);
+    A = 0; B = 1; #10 $display("%b %b | %b", A, B, Y);
+    A = 1; B = 0; #10 $display("%b %b | %b", A, B, Y);
+    A = 1; B = 1; #10 $display("%b %b | %b", A, B, Y);
     $finish;
    end
 

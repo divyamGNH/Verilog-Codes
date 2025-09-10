@@ -11,10 +11,9 @@ endmodule
 
 module tbNandGate;
 
-    reg A, B;   // test inputs
-    wire Y;     // test output
+    reg A, B;
+    wire Y;
 
-    // Instantiate the AND gate (Unit Under Test)
     nandGate uut (
         .a(A),
         .b(B),
@@ -22,7 +21,7 @@ module tbNandGate;
     );
 
     initial begin
-        $display("A B | Y");  // header
+        $display("A B | Y");
 
         A = 0; B = 0; #1 $display("%b %b | %b", A, B, Y);
         A = 0; B = 1; #1 $display("%b %b | %b", A, B, Y);

@@ -9,7 +9,7 @@ module andFromNor(
     nor(nA, a, a);
     nor(nB, b, b);
     nor(y, nA, nB);
-    nor(y, y, y);  // invert to get AND
+    nor(y, y, y);
 
 endmodule
 

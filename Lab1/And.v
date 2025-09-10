@@ -22,7 +22,7 @@ module tb_andGate;
     );
 
     initial begin
-        $display("A B | Y");  // header
+        $display("A B | Y");
 
         A = 0; B = 0; #1 $display("%b %b | %b", A, B, Y);
         A = 0; B = 1; #1 $display("%b %b | %b", A, B, Y);

@@ -9,7 +9,10 @@ module xnorFromNand(
     nand(t1, a, b);
     nand(t2, a, t1);
     nand(t3, b, t1);
-    nand(y, t2, t3);
+    nand(t4, t2, t3);
+
+    //we got xor above now simply inverse it.
+    nand(y, t4, t4);
 
 endmodule
 
