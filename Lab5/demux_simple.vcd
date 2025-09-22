@@ -1,0 +1,78 @@
+$date
+	Mon Sep 22 11:34:38 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module tb_demux_simple $end
+$var wire 8 ! OUT [7:0] $end
+$var reg 1 " DIN $end
+$var reg 3 # SEL [2:0] $end
+$var integer 32 $ i [31:0] $end
+$scope module uut $end
+$var wire 1 " din $end
+$var wire 3 % sel [2:0] $end
+$var wire 8 & out [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b1 &
+b0 %
+b0 $
+b0 #
+1"
+b1 !
+$end
+#50
+b10 !
+b10 &
+b1 #
+b1 %
+b1 $
+#100
+b100 !
+b100 &
+b10 #
+b10 %
+b10 $
+#150
+b1000 !
+b1000 &
+b11 #
+b11 %
+b11 $
+#200
+b10000 !
+b10000 &
+b100 #
+b100 %
+b100 $
+#250
+b100000 !
+b100000 &
+b101 #
+b101 %
+b101 $
+#300
+b1000000 !
+b1000000 &
+b110 #
+b110 %
+b110 $
+#350
+b10000000 !
+b10000000 &
+b111 #
+b111 %
+b111 $
+#400
+b1000 $
+#450

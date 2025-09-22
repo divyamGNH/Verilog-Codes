@@ -25,9 +25,16 @@ module tb_muxGL;
 
     muxGL uut (.in(IN), .sel(SEL), .y(Y));
 
+    
+
     initial begin
 
+        //gtk wave
+        $dumpfile("demuxGL.vcd");
+        $dumpvars(0, tb_demuxDF);
+
         IN = 8'b10101010;
+
         $display("Input is : %b", IN);
 
         $display("Selector | Y");
@@ -43,5 +50,7 @@ module tb_muxGL;
         
         $finish;
     end
+
+    
 
 endmodule

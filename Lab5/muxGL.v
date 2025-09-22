@@ -35,6 +35,10 @@ module tb_muxGL;
 
     initial begin
 
+        //gtk wave
+        $dumpfile("muxGL.vcd");
+        $dumpvars(0, tb_muxGL);
+
         IN = 8'b10101010;
         $display("Input is : %b", IN);
 
